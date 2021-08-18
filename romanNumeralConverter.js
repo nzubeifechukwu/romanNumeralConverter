@@ -38,12 +38,39 @@ function convertToRoman(num) {
             romNum = romNum + 'X';
         }
         return romNum + convertToRoman(remainder);
-    } else if (num < 1000) {
-        let hundredPart = Math.floor(num / 100) * 100;
+    } else if (num < 100) {
+        let remainder = num % 10;
+        return 'XC' + convertToRoman(remainder);
+      } else if (num < 400) {
+        let hundredPart = Math.floor(num / 100);
         let remainder = num % 100;
-        return convertToRoman(hundredPart) + convertToRoman(remainder);
-    }
+        for (let i = 0; i < hundredPart; i++) {
+            romNum = romNum + 'C';
+        }
+        return romNum + convertToRoman(remainder);
+      } else if (num < 500) {
+        let remainder = num % 100;
+        return 'CD' + convertToRoman(remainder);
+      } else if (num < 900) {
+        romNum = 'D';
+        let hundredPart = Math.floor(num / 100);
+        let remainder = num % 100;
+        for (let i = 5; i < hundredPart; i++) {
+            romNum = romNum + 'C';
+        }
+        return romNum + convertToRoman(remainder);
+      } else if (num < 1000) {
+        let remainder = num % 100;
+        return 'CM' + convertToRoman(remainder);
+      } else {
+        let thousandPart = Math.floor(num / 1000);
+        let remainder = num % 1000;
+        for (let i = 0; i < thousandPart; i++) {
+            romNum = romNum + 'M';
+        }
+        return romNum + convertToRoman(remainder);
+      }
     return romNum;
 }
-   
+
 console.log(convertToRoman(36));
