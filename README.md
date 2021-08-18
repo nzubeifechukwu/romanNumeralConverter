@@ -4,7 +4,7 @@
 
 Convert the given number into a roman numeral.
 
-All [roman numerals](http://www.mathsisfun.com/roman-numerals.html) answers should be provided in upper-case.
+All [roman numeral](http://www.mathsisfun.com/roman-numerals.html) answers should be provided in upper-case.
 
 ## Test Cases
 * `convertToRoman(2)` should return the string `II`
