@@ -1,5 +1,5 @@
 /**
- * Convert the given number into a roman numeral.
+ * Convert the given number into a roman numeral. Number is less than 4000
  * All roman numeral answers should be provided in upper-case. 
  */
 function convertToRoman(num) {
@@ -73,4 +73,4 @@ function convertToRoman(num) {
     return romNum;
 }
 
-console.log(convertToRoman(36));
+console.log(convertToRoman(2014));
